@@ -13,7 +13,7 @@ const Update = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/master-agent/${_id}`,
+        `https://vlk-server.vercel.app/master-agent/${_id}`,
         {
           phone_number: phoneNumber,
         }

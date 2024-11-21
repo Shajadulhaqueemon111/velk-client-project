@@ -10,7 +10,9 @@ const SubAdmin7 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/master-agent7");
+        const response = await axios.get(
+          "https://vlk-server.vercel.app/master-agent7"
+        );
         setData(response.data);
       } catch (err) {
         setError(err);
@@ -45,7 +47,6 @@ const SubAdmin7 = () => {
                 <th className="px-2 py-3">App</th>
                 <th className="px-2 py-3">Phone Number</th>
                 <th className="px-2 py-3">Complain</th>
-                <th className="px-2 py-3">Update</th>
               </tr>
             </thead>
             {/* Table Body */}
@@ -73,11 +74,6 @@ const SubAdmin7 = () => {
                       to={`https://wa.me/${item.phone_number}`}
                     >
                       {item.complain}
-                    </Link>
-                  </td>
-                  <td className="px-2 py-4 border">
-                    <Link className="text-red-500" to={`/update/${item._id}`}>
-                      update
                     </Link>
                   </td>
                 </tr>

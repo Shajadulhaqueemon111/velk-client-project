@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { LuSquareEqual } from "react-icons/lu";
 import "./Navbar.css";
 import FirstDropeDwon from "./FirstDropeDwon";
 import SecondBropeDwon from "./SecondBropeDwon";
@@ -26,17 +27,17 @@ const NavBar = () => {
         {/* Left Section */}
         <div className="flex gap-4">
           <Link to="/">
-            <button className="px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+            <button className="px-4 py-2  border rounded hover:bg-black hover:text-white transition">
               ভেল্কি
             </button>
           </Link>
           <Link to="/">
-            <button className="px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+            <button className="px-4 py-2  border rounded hover:bg-black hover:text-white transition">
               ভেল্কি কমিউনিটি
             </button>
           </Link>
           <Link to="/">
-            <button className="px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+            <button className="px-4 py-2  border rounded hover:bg-black hover:text-white transition">
               ভেল্কি ফোরাম
             </button>
           </Link>
@@ -45,7 +46,7 @@ const NavBar = () => {
         {/* Right Section */}
         <div className="">
           <Link to="/master-agent-list">
-            <button className="px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+            <button className="px-4 py-2  border rounded text-red-600 hover:text-red-500 hover:bg-gray-300 transition">
               কাস্টমার সার্ভিস
             </button>
           </Link>
@@ -56,26 +57,14 @@ const NavBar = () => {
       <div className="block md:hidden p-8 bg-gray-100">
         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
           <div className="flex gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-8 h-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <LuSquareEqual className="text-3xl font-bold mt-2"></LuSquareEqual>
+
             <img
               src="https://i.ibb.co.com/7tw3WZc/velki-site-main-logo-mobile.jpg"
               alt="Velki Logo"
             />
             <Link to="/master-agent-list">
-              <button className="px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+              <button className="px-4 py-2  border text-red-500 rounded hover:text-red-500 hover:bg-gray-300 transition">
                 কাস্টমার সার্ভিস
               </button>
             </Link>
@@ -90,7 +79,7 @@ const NavBar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 md:hidden overflow-y-auto`}
       >
-        <div className="p-8 flex flex-col space-y-4">
+        <div className="p-8 flex flex-col space-y-4 ga-4">
           {/* Close Icon */}
           <button
             onClick={() => setIsSidebarOpen(false)}
@@ -98,49 +87,169 @@ const NavBar = () => {
           >
             &times; {/* Cross icon */}
           </button>
-
-          <Link to="/" onClick={() => setIsSidebarOpen(false)}>
-            <button className="px-4 py-2 bg-white text-black rounded hover:bg-black hover:text-white transition">
-              ভেল্কি
-            </button>
-          </Link>
-
-          <Link to="/master-agent-list" onClick={() => setIsSidebarOpen(false)}>
-            <button className="px-4 py-2 bg-white text-black rounded hover:bg-black hover:text-white transition">
-              ভেল্কি কমিউনিটি
-            </button>
-          </Link>
-
-          <Link to="/master-agent-list" onClick={() => setIsSidebarOpen(false)}>
-            <button className="px-4 py-2 bg-white text-black rounded hover:bg-black hover:text-white transition">
-              ভেল্কি ফোরাম
-            </button>
-          </Link>
-
-          <Link to="/master-agent-list" onClick={() => setIsSidebarOpen(false)}>
-            <button className="px-4 py-2 bg-white text-black rounded hover:bg-black hover:text-white transition">
-              কাস্টমার সার্ভিস
-            </button>
-          </Link>
-
-          <Link to="/" onClick={() => setIsSidebarOpen(false)}>
-            <button className="hover-show-options px-4 py-2 bg-white text-black border rounded hover:bg-black hover:text-white transition">
-              ভেল্কি অটো ডিপোজিট এজেন্ট
-            </button>
-          </Link>
-
-          <Link to="/" onClick={() => setIsSidebarOpen(false)}>
-            <button className="hover-show-options px-4 py-2 bg-white text-black border rounded hover:bg-black hover:text-white transition">
-              হোম পেজ
-            </button>
-          </Link>
-
           <div>
-            <FirstDropeDwon />
+            <Link to="/">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className=" text-white  rounded  hover:text-white transition"
+              >
+                ভেল্কি
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/master-agent-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className=" text-white   hover:text-white transition"
+              >
+                ভেল্কি কমিউনিটি
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/master-agent-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className=" text-white  hover:text-white transition"
+              >
+                ভেল্কি ফোরাম
+              </h1>
+            </Link>
+          </div>
+          <div className="mt-4">
+            <Link to="/master-agent-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="text-white transition"
+              >
+                কাস্টমার সার্ভিস
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options text-white  hover:text-white transition"
+              >
+                ভেল্কি অটো ডিপোজিট এজেন্ট
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options text-white hover:text-white transition"
+              >
+                হোম পেজ
+              </h1>
+            </Link>
           </div>
 
           <div>
-            <SecondBropeDwon />
+            <Link to="/">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options text-white hover:text-white transition"
+              >
+                ভেল্কি প্রক্সী লিঙ্ক
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/side-admin-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options  text-white hover:text-white transition"
+              >
+                ভেল্কিতে একাউন্ট খুলবেন?
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/side-admin-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options  text-white hover:text-white transition"
+              >
+                এজেন্ট এর নতুন নাম্বার
+              </h1>
+            </Link>
+          </div>
+          <div>
+            <Link to="/side-admin-list">
+              <h1
+                onClick={() => setIsSidebarOpen(false)}
+                className="hover-show-options text-white hover:text-white transition"
+              >
+                ফোন নাম্বার সার্চ করুন
+              </h1>
+            </Link>
+          </div>
+          {/* second nav */}
+          <div>
+            <div>
+              <Link to="/master-agent-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  মাষ্টার এজেন্ট লিষ্ট
+                </h1>
+              </Link>
+            </div>
+            <div className="mt-2">
+              <Link to="/master-agent-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  এজেন্ট কে ভেরিফাই করুন
+                </h1>
+              </Link>
+            </div>
+            <div className="mt-2">
+              <Link to="/super-agent-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  সুপার এজেন্ট লিষ্ট
+                </h1>
+              </Link>
+            </div>
+            <div className="mt-2">
+              <Link to="/sub-admin-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  সাব এডমিন লিষ্ট
+                </h1>
+              </Link>
+            </div>
+            <div className="mt-2">
+              <Link to="/side-admin-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  সাইট এডমিন লিষ্ট
+                </h1>
+              </Link>
+            </div>
+            <div className="mt-2">
+              <Link to="/master-agent-list">
+                <h1
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="hover-show-options text-white hover:text-white transition"
+                >
+                  কাস্টমার সার্ভিস লিষ্ট
+                </h1>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -163,13 +272,13 @@ const NavBar = () => {
 
       {/* Second Navbar */}
       <div className="mt-10 red-line ">
-        <div className="mt-10 hidden md:block mx-auto w-4/5">
-          <div className="flex gap-4 flex-wrap">
-            <button className="hover-show-options px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+        <div className="mt-10 shadow-xl p-4 hidden md:block ">
+          <div className="flex gap-4  flex-wrap">
+            <button className="hover-show-options px-4 py-2  border rounded hover:bg-black hover:text-white transition">
               <Link to="/master-agent-list">ভেল্কি অটো ডিপোজিট এজেন্ট</Link>
             </button>
             <Link to="/">
-              <button className="hover-show-options px-4 py-2 bg-white border rounded hover:bg-black hover:text-white transition">
+              <button className="hover-show-options px-4 py-2  border rounded hover:bg-black hover:text-white transition">
                 হোম পেজ
               </button>
             </Link>

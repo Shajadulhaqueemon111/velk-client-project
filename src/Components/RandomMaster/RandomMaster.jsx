@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const RandomMaster = () => {
-  const [activeView, setActiveView] = useState("grid");
+  const [activeView, setActiveView] = useState("list");
 
   const cardData = [
     {

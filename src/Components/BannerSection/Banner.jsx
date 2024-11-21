@@ -146,7 +146,7 @@ const Banner = () => {
             <RiEqualLine className="mt-2"></RiEqualLine>
           </div>
           {/* first niput-text */}
-          <div className="flex text-center mt-3 gap-2">
+          <div className="flex p-2 text-center mt-3 gap-2">
             <div>
               <img
                 className=" w-20"
@@ -156,22 +156,23 @@ const Banner = () => {
             </div>
             <div className="text-center">
               <Link to="/">
-                <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
+                <p className="p-0 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
-                </button>
+                </p>
               </Link>
-              <Link to="/">
-                <h1 className="mt-2 font-bold hover:text-red-500 whitespace-nowrap">
+
+              <Link>
+                <h1 className="mt-2  hover:text-red-500 whitespace-nowrap">
                   সাব এডমিন লিষ্টঃ
                 </h1>
               </Link>
             </div>
 
-            <p className="mt-2 whitespace-nowrap ">02 January 2024</p>
+            <p className=" whitespace-nowrap ">02 January 2024</p>
           </div>
           <hr />
           {/* second niput-text */}
-          <div className="flex text-center gap-2 ">
+          <div className="flex p-2 text-center mt-3 gap-2">
             <div>
               <img
                 className=" w-20"
@@ -179,23 +180,25 @@ const Banner = () => {
                 alt=""
               />
             </div>
-            <div>
+            <div className="text-center">
               <Link to="/">
-                <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
+                <p className="p-0 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
-                </button>
+                </p>
               </Link>
-              <Link to="/">
-                <h1 className="mt-2 font-bold hover:text-red-500 whitespace-nowrap">
+
+              <Link>
+                <h1 className="mt-2  hover:text-red-500 whitespace-nowrap">
                   এজেন্ট কয় প্রকারঃ
                 </h1>
               </Link>
             </div>
-            <p className="mt-2 whitespace-nowrap">02 January 2024</p>
+
+            <p className=" whitespace-nowrap ">02 January 2024</p>
           </div>
           <hr />
-          {/* 3rd niput-text */}
-          <div className="flex text-center gap-2">
+          {/* third niput-text */}
+          <div className="flex p-2 text-center mt-3 gap-2">
             <div>
               <img
                 className=" w-20"
@@ -203,23 +206,24 @@ const Banner = () => {
                 alt=""
               />
             </div>
-            <div>
+            <div className="text-center">
               <Link to="/">
-                <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
+                <p className="p-0 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
-                </button>
+                </p>
               </Link>
-              <Link to="/master-agent-list">
-                <h1 className="mt-2  hover:text-red-500 font-bold">
+
+              <Link>
+                <h1 className="mt-2  hover:text-red-500 whitespace-nowrap">
                   এজেন্ট লিস্টঃ
                 </h1>
               </Link>
             </div>
-            <p className="mt-2">02 January 2024</p>
+
+            <p className=" whitespace-nowrap ">02 January 2024</p>
           </div>
           <hr />
-          {/* four niput-text */}
-          <div className="flex text-center gap-3">
+          <div className="flex p-2 text-center mt-3 gap-2">
             <div>
               <img
                 className=" w-20"
@@ -227,20 +231,26 @@ const Banner = () => {
                 alt=""
               />
             </div>
-            <div>
+            <div className="text-center">
               <Link to="/">
-                <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
+                <p className="p-0 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
-                </button>
+                </p>
               </Link>
-              <Link to="/side-admin-list">
-                <h1 className="mt-2 font-bold hover:text-red-500 whitespace-nowrap">
+
+              <Link>
+                <h1 className="mt-2  hover:text-red-500 whitespace-nowrap">
                   সাইট এডমিন লিষ্ট
                 </h1>
               </Link>
             </div>
-            <p className="mt-2 whitespace-nowrap">02 January 2024</p>
+
+            <p className=" whitespace-nowrap ">02 January 2024</p>
           </div>
+
+          <hr />
+          {/* second niput-text */}
+
           <div className="mt-8">
             <img src="https://i.ibb.co.com/KcPGh43/addaccount.jpg" alt="" />
           </div>

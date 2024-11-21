@@ -5,7 +5,7 @@ import { IoGridOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Faqsection = () => {
-  const [activeButton, setActiveButton] = useState("grid");
+  const [activeButton, setActiveButton] = useState("list");
 
   const faqCards = [
     {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SecondBropeDwon = () => {
   const [isOpens, setIsOpens] = useState(false);
-  const [setIsSidebarOpen] = useState(false);
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".dropdown-container")) {
@@ -30,60 +30,52 @@ const SecondBropeDwon = () => {
         {/* Dropdown Content */}
         {isOpens && (
           <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
-            <a
-              href="#"
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            >
+            <a className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">
               <div className="dropdown relative">
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/master-agent-list"
-                >
-                  <a className="hover:bg-slate-400 px-4 py-2 block">
-                    এজেন্ট কে ভেরিফাই করুন
-                  </a>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/master-agent-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    মাষ্টার এজেন্ট লিষ্ট
-                  </h1>
-                </Link>
+                <div>
+                  <Link to="/master-agent-list">
+                    <h1 className="hover:bg-slate-400 px-4 py-2 block">
+                      মাষ্টার এজেন্ট লিষ্ট
+                    </h1>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/master-agent-list">
+                    <button className="hover:bg-slate-400 px-4 py-2 block">
+                      এজেন্ট কে ভেরিফাই করুন
+                    </button>
+                  </Link>
+                </div>
 
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/super-agent-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    সুপার এজেন্ট লিষ্ট
-                  </h1>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/sub-admin-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    সাব এডমিন লিষ্ট
-                  </h1>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/side-admin-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    সাইট এডমিন লিষ্ট
-                  </h1>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/master-agent-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    কাস্টমার সার্ভিস লিষ্ট
-                  </h1>
-                </Link>
+                <div>
+                  <Link to="/super-agent-list">
+                    <button className="hover:bg-slate-400 px-4 py-2 block">
+                      সুপার এজেন্ট লিষ্ট
+                    </button>
+                  </Link>
+                </div>
+
+                <div>
+                  <Link to="/sub-admin-list">
+                    <button className="hover:bg-slate-400 px-4 py-2 block">
+                      সাব এডমিন লিষ্ট
+                    </button>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/side-admin-list">
+                    <h1 className="hover:bg-slate-400 px-4 py-2 block">
+                      সাইট এডমিন লিষ্ট
+                    </h1>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/master-agent-list">
+                    <button className="hover:bg-slate-400 px-4 py-2 block">
+                      কাস্টমার সার্ভিস লিষ্ট
+                    </button>
+                  </Link>
+                </div>
               </div>
             </a>
           </div>

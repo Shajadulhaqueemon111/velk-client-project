@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const FirstDropeDwon = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [setIsSidebarOpen] = useState(false);
+
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -35,38 +35,32 @@ const FirstDropeDwon = () => {
             <a className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900">
               <div className="dropdown relative">
                 <a className="hover:bg-slate-400 px-4 py-2 block">
-                  <Link
-                    onClick={() => setIsSidebarOpen(false)}
-                    to="/side-admin-list"
-                  >
-                    ভেল্কি প্রক্সী লিঙ্ক
-                  </Link>
+                  <div>
+                    <Link to="/side-admin-list">ভেল্কি প্রক্সী লিঙ্ক</Link>
+                  </div>
                 </a>
 
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/side-admin-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    ভেল্কিতে একাউন্ট খুলবেন?
-                  </h1>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/side-admin-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    এজেন্ট এর নতুন নাম্বার
-                  </h1>
-                </Link>
-                <Link
-                  onClick={() => setIsSidebarOpen(false)}
-                  to="/side-admin-list"
-                >
-                  <h1 className="hover:bg-slate-400 px-4 py-2 block">
-                    ফোন নাম্বার সার্চ করুন
-                  </h1>
-                </Link>
+                <div>
+                  <Link to="/side-admin-list">
+                    <h1 className="hover:bg-slate-400 px-4 py-2 block">
+                      ভেল্কিতে একাউন্ট খুলবেন?
+                    </h1>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/side-admin-list">
+                    <h1 className="hover:bg-slate-400 px-4 py-2 block">
+                      এজেন্ট এর নতুন নাম্বার
+                    </h1>
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/side-admin-list">
+                    <h1 className="hover:bg-slate-400 px-4 py-2 block">
+                      ফোন নাম্বার সার্চ করুন
+                    </h1>
+                  </Link>
+                </div>
               </div>
             </a>
           </div>
