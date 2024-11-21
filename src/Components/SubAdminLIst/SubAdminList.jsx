@@ -1,62 +1,54 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import SubAdmins from "./SubAdmins";
 
 const SubAdminList = () => {
-  const [category, setCategory] = useState("");
-  const [agentId, setAgentId] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here, such as sending the data to an API or redirecting
-    console.log("Form submitted:", { category, agentId });
-  };
-
   return (
     <div className="mt-10 ">
-      <div className="mx-auto w-3/5 p-4 text-center">
-        <h1 className="text-center">এজেন্ট এর আইডি নাম্বার দিয়ে খুজুনঃ</h1>
-        <form className="gap-3 shadow-2xl" onSubmit={handleSubmit}>
-          {/* Dropdown for Agent Type */}
-          <label className="text-xl font-bold">Agent Type:</label>
-          <div className="mb-2 mt-3">
-            <select
-              id="category"
-              name="category"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="input input-bordered w-full max-w-xs"
-            >
-              <option value="মাষ্টার এজেন্ট">মাষ্টার এজেন্ট</option>
-              <option value="সুপার এজেন্ট">সুপার এজেন্ট</option>
-              <option value="সাব এডমিন">সাব এডমিন</option>
-            </select>
-          </div>
+      <div>
+        <div>
+          <h1 className="text-center mb-6">
+            এজেন্ট এর আইডি নাম্বার দিয়ে খুজুনঃ
+          </h1>
+          <div className="p-4 bg-gray-100 rounded-lg max-w-md mx-auto shadow-lg">
+            <form className="space-y-4">
+              {/* Agent Type Dropdown */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Agent Type
+                </label>
+                <select
+                  className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  name="agentType"
+                >
+                  <option>Master Agent</option>
+                  <option>Super Agent</option>
+                  <option>Sub Admin</option>
+                </select>
+              </div>
 
-          {/* Input for Agent ID */}
-          <label className="text-xl font-bold">Agent ID:</label>
-          <div className="mb-2 mt-3">
-            <input
-              type="text"
-              id="agentid"
-              name="agentid"
-              value={agentId}
-              onChange={(e) => setAgentId(e.target.value)}
-              placeholder="Agent Id"
-              className="input input-bordered w-full max-w-xs"
-            />
-          </div>
+              {/* Agent ID Input */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Agent ID
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Agent ID"
+                  className="block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  name="agentID"
+                />
+              </div>
 
-          {/* Submit Button */}
-          <div className="mt-4">
-            <button
-              className="btn bg-[green] text-white btn-start"
-              type="submit"
-            >
-              Submit
-            </button>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              >
+                Search
+              </button>
+            </form>
           </div>
-        </form>
+        </div>
       </div>
       {/* second section */}
       <div className="">

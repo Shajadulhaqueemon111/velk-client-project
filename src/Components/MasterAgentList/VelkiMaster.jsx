@@ -9,45 +9,31 @@ import SubAdmin8 from "./SubAdmin/SubAdmin8";
 import SubAdmin9 from "./SubAdmin/SubAdmin9";
 import SubAdmin10 from "./SubAdmin/SubAdmin10";
 import SubAdmin11 from "./SubAdmin/SubAdmin11";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const VelkiMaster = () => {
-  const data = [
-    {
-      id: 2462,
-      agent: "মাষ্টার",
-      app: "https://i.ibb.co.com/k0b36SS/halal-whatsapp.png",
-      phone_number: "+85570565198",
-      complain: "অভিযোগ",
-    },
-    {
-      id: 2343,
-      agent: "মাষ্টার",
-      app: "https://i.ibb.co.com/k0b36SS/halal-whatsapp.png",
-      phone_number: "+85570550271",
-      complain: "অভিযোগ",
-    },
-    {
-      id: 2413,
-      agent: "মাষ্টার",
-      app: "https://i.ibb.co.com/k0b36SS/halal-whatsapp.png",
-      phone_number: "+85510523706",
-      complain: "অভিযোগ",
-    },
-    {
-      id: 2628,
-      agent: "মাষ্টার",
-      app: "https://i.ibb.co.com/k0b36SS/halal-whatsapp.png",
-      phone_number: "+855963010845",
-      complain: "অভিযোগ",
-    },
-    {
-      id: 2463,
-      agent: "মাষ্টার",
-      app: "https://i.ibb.co.com/k0b36SS/halal-whatsapp.png",
-      phone_number: "+85570565032",
-      complain: "অভিযোগ",
-    },
-  ];
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/master-agent");
+        setData(response.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div className="mt-10">
@@ -62,42 +48,48 @@ const VelkiMaster = () => {
       </div>
       {/* Table Data */}
       <div className="overflow-x-auto">
-        <table className="table table-zebra w-full text-sm md:text-base">
+        <table className="table table-zebra md:font-bold lg:font-bold text-center w-full text-sm sm:text-base md:text-lg lg:text-xl">
           {/* Table Head */}
-          <thead className="bg-gray-200">
-            <tr>
+          <thead className="bg-gray-200 ">
+            <tr className="font-bold md:text-lg lg:text-xl">
               <th className="px-2 py-3">ID</th>
               <th className="px-2 py-3">Agent</th>
               <th className="px-2 py-3">App</th>
               <th className="px-2 py-3">Phone Number</th>
               <th className="px-2 py-3">Complain</th>
+              <th className="px-2 py-3">Update</th>
             </tr>
           </thead>
           {/* Table Body */}
           <tbody>
-            {data.map((item, index) => (
-              <tr key={index} className="hover:bg-gray-100">
-                <td className="px-2 py-2">{item.id}</td>
-                <td className="px-2 py-2">{item.agent}</td>
-                <td className="px-2 py-2">
+            {data.map((item, _id) => (
+              <tr key={_id} className="hover:bg-gray-100">
+                <td className="px-2 py-2 border">{item.id}</td>
+                <td className="px-2 py-2 border">{item.agent}</td>
+                <td className="px-2 py-2 border">
                   <Link to="https://wa.me/+85585292543">
                     <img className="w-8 mx-auto" src={item.app} alt="" />
                   </Link>
                 </td>
-                <td className="px-2 py-2">
+                <td className="px-2 py-2 border">
                   <Link
-                    className="hover:text-red-500"
+                    className="text-red-500"
                     to={`https://wa.me/${item.phone_number}`}
                   >
                     {item.phone_number}
                   </Link>
                 </td>
-                <td className="px-2 py-2">
+                <td className="px-2 py-4 border">
                   <Link
-                    className="hover:text-red-500"
+                    className="text-red-500"
                     to={`https://wa.me/${item.phone_number}`}
                   >
                     {item.complain}
+                  </Link>
+                </td>
+                <td className="px-2 py-4 border">
+                  <Link className="text-red-500" to={`/update/${item._id}`}>
+                    update
                   </Link>
                 </td>
               </tr>

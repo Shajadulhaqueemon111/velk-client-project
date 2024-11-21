@@ -10,17 +10,17 @@ const Banner = () => {
             <h1>In The Spotlight</h1>
           </div>
           <div className="border-style-3">
-            <Link to="/master-agent-list">
+            <Link to="/">
               <button className="px-2 py-2 mt-3 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                 AGENT
               </button>
             </Link>
-            <Link to="/master-agent-list">
+            <Link to="/">
               <h1 className="text-3xl font-bold mt-3 mb-3">
                 ভেল্কি অটো ডিপোজিট এজেন্ট
               </h1>
             </Link>
-            <Link to="/master-agent-list">
+            <Link to="/">
               <h1 className="text-2xl mt-3 mb-3 text-red-500">
                 ভেল্কি তে কিভাবে অটো ডিপোজিট করবেন তা জানতে <br />
                 আপনি এই লিঙ্ক এ ক্লিক করে দয়া করে ভিডিও টি দেখে নিন
@@ -52,7 +52,7 @@ const Banner = () => {
               </div>
 
               {/* Text Content */}
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="mt-4 text-lg font-semibold hover:text-red-500">
                   কাস্টমার সার্ভিস লিষ্ট
                 </h1>
@@ -60,7 +60,7 @@ const Banner = () => {
               <h1 className="text-center text-2xl font-bold mt-8">
                 VELKI CUSTOMER <br /> SERVICE LIST
               </h1>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="mt-6 p-2 w-full text-black border rounded hover:bg-slate-300 hover:text-black transition">
                   Read More ....কাস্টমার সার্ভিস লিষ্ট
                 </button>
@@ -71,7 +71,7 @@ const Banner = () => {
             <div className="max-w-xs bg-white border rounded shadow-lg p-4  relative">
               <div className="relative">
                 {/* Agent Button */}
-                <Link to="/master-agent-list">
+                <Link to="/">
                   <button className="absolute top-20 left-0 p-1 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition z-10">
                     AGENT
                   </button>
@@ -83,7 +83,7 @@ const Banner = () => {
                   className="rounded-t"
                 />
               </div>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="mt-4 text-lg font-semibold hover:text-red-500">
                   কাস্টমার সার্ভিস লিষ্ট
                 </h1>
@@ -95,7 +95,7 @@ const Banner = () => {
                 VELKI.COM <br />
                 **হোয়াটসঅ্যাপ ব্যাতিত অন্য
               </h1>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="mt-4 p-2 w-full text-black border rounded hover:bg-slate-300 hover:text-black transition">
                   Read More ....কাস্টমার সার্ভিস লিষ্ট
                 </button>
@@ -106,7 +106,7 @@ const Banner = () => {
             <div className="max-w-xs bg-white border rounded shadow-lg p-4 relative">
               <div className="relative">
                 {/* Agent Button */}
-                <Link to="/master-agent-list">
+                <Link to="/">
                   <button className="absolute top-20 left-0 p-1 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition z-10">
                     AGENT
                   </button>
@@ -118,7 +118,7 @@ const Banner = () => {
                   className="rounded-t"
                 />
               </div>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="mt-4 text-lg font-semibold hover:text-red-500">
                   কাস্টমার সার্ভিস লিষ্ট
                 </h1>
@@ -130,7 +130,7 @@ const Banner = () => {
                 VELKI.COM <br />
                 **হোয়াটসঅ্যাপ ব্যাতিত অন্য
               </h1>
-              <Link to="/master-agent-list">
+              <Link to="">
                 <button className="mt-4 p-2 w-full text-black border rounded hover:bg-slate-300 hover:text-black transition">
                   Read More ....কাস্টমার সার্ভিস লিষ্ট
                 </button>
@@ -155,12 +155,12 @@ const Banner = () => {
               />
             </div>
             <div className="text-center">
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
                 </button>
               </Link>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="mt-2 font-bold hover:text-red-500 whitespace-nowrap">
                   সাব এডমিন লিষ্টঃ
                 </h1>
@@ -180,12 +180,12 @@ const Banner = () => {
               />
             </div>
             <div>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
                 </button>
               </Link>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="mt-2 font-bold hover:text-red-500 whitespace-nowrap">
                   এজেন্ট কয় প্রকারঃ
                 </h1>
@@ -204,7 +204,7 @@ const Banner = () => {
               />
             </div>
             <div>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
                 </button>
@@ -228,7 +228,7 @@ const Banner = () => {
               />
             </div>
             <div>
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="p-2 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition">
                   AGENT
                 </button>

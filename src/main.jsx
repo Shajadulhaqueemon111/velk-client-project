@@ -8,6 +8,7 @@ import GoToTop from "./Components/GoToTop/GoToTop";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <GoToTop></GoToTop>
+
     <RouterProvider router={router} future={{ v7_fetcherPersist: true }} />
   </StrictMode>
 );

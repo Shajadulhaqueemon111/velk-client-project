@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SecondBropeDwon = () => {
   const [isOpens, setIsOpens] = useState(false);
-
+  const [setIsSidebarOpen] = useState(false);
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (!event.target.closest(".dropdown-container")) {
@@ -35,33 +35,51 @@ const SecondBropeDwon = () => {
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
             >
               <div className="dropdown relative">
-                <Link to="/master-agent-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/master-agent-list"
+                >
                   <a className="hover:bg-slate-400 px-4 py-2 block">
                     এজেন্ট কে ভেরিফাই করুন
                   </a>
                 </Link>
-                <Link to="/master-agent-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/master-agent-list"
+                >
                   <h1 className="hover:bg-slate-400 px-4 py-2 block">
                     মাষ্টার এজেন্ট লিষ্ট
                   </h1>
                 </Link>
 
-                <Link to="/super-agent-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/super-agent-list"
+                >
                   <h1 className="hover:bg-slate-400 px-4 py-2 block">
                     সুপার এজেন্ট লিষ্ট
                   </h1>
                 </Link>
-                <Link to="/sub-admin-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/sub-admin-list"
+                >
                   <h1 className="hover:bg-slate-400 px-4 py-2 block">
                     সাব এডমিন লিষ্ট
                   </h1>
                 </Link>
-                <Link to="/side-admin-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/side-admin-list"
+                >
                   <h1 className="hover:bg-slate-400 px-4 py-2 block">
                     সাইট এডমিন লিষ্ট
                   </h1>
                 </Link>
-                <Link to="/master-agent-list">
+                <Link
+                  onClick={() => setIsSidebarOpen(false)}
+                  to="/master-agent-list"
+                >
                   <h1 className="hover:bg-slate-400 px-4 py-2 block">
                     কাস্টমার সার্ভিস লিষ্ট
                   </h1>

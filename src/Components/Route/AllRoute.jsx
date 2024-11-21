@@ -6,6 +6,7 @@ import MsterAgent from "../MasterAgentList/MsterAgent";
 import SuperAgentList from "../SuperAgentList/SuperAgentList";
 import SubAdminList from "../SubAdminLIst/SubAdminList";
 import SideAdminList from "../SideAdminLIst/SideAdminList";
+import Update from "../MasterAgentList/SubAdmin/Update";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/side-admin-list",
         element: <SideAdminList></SideAdminList>,
+      },
+      {
+        path: "/update/:_id",
+        element: <Update></Update>,
       },
     ],
   },

@@ -75,7 +75,7 @@ const RandomMaster = () => {
         </div>
       </div>
       <div className="bg-slate-300 p-4 mt-4 mb-4">
-        <Link to="/master-agent-list">
+        <Link to="/">
           <btn className="text-xl btn font-bold  px-4 py-2 bg-red-600 text-white">
             MASTER AGENT{" "}
             <FaArrowRightLong className="text-xl font-bold mt-1 "></FaArrowRightLong>
@@ -103,7 +103,7 @@ const RandomMaster = () => {
                 activeView === "list" ? "w-1/3" : ""
               } flex-shrink-0`}
             >
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <button className="absolute top-20 left-0 p-1 bg-white text-black border rounded hover:bg-red-500 hover:text-white transition z-10">
                   MASTER AGENT
                 </button>
@@ -121,7 +121,7 @@ const RandomMaster = () => {
                 activeView === "list" ? "ml-4 w-2/3" : ""
               } text-center`}
             >
-              <Link to="/master-agent-list">
+              <Link to="/">
                 <h1 className="text-lg font-semibold hover:text-red-500">
                   {card.title}
                 </h1>
@@ -130,7 +130,7 @@ const RandomMaster = () => {
               <h1 className="text-xl mt-4">
                 মাষ্টার এজেন্ট আইডিঃ {card.agentId} <br />
                 হোয়াটসঅ্যাপ নাম্বারঃ{" "}
-                <Link to="/master-agent-list" className="hover:text-red-500">
+                <Link to="/" className="hover:text-red-500">
                   {card.whatsapp}
                 </Link>
               </h1>
