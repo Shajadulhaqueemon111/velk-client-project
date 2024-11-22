@@ -75,7 +75,7 @@ const NavBar = () => {
       {/* Sidebar (for small screens) */}
       {/* Sidebar (for small screens) */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform ${
+        className={`fixed top-0 left-0 h-full w-80 bg-gray-800 text-white transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 md:hidden overflow-y-auto`}
       >
@@ -131,7 +131,7 @@ const NavBar = () => {
             <Link to="/">
               <h1
                 onClick={() => setIsSidebarOpen(false)}
-                className="hover-show-options text-white  hover:text-white transition"
+                className="hover-show-options text-white whitespace-nowrap  hover:text-white transition"
               >
                 ভেল্কি অটো ডিপোজিট এজেন্ট
               </h1>
@@ -162,7 +162,7 @@ const NavBar = () => {
             <Link to="/side-admin-list">
               <h1
                 onClick={() => setIsSidebarOpen(false)}
-                className="hover-show-options  text-white hover:text-white transition"
+                className="hover-show-options whitespace-nowrap text-white hover:text-white transition"
               >
                 ভেল্কিতে একাউন্ট খুলবেন?
               </h1>
@@ -204,7 +204,7 @@ const NavBar = () => {
               <Link to="/master-agent-list">
                 <h1
                   onClick={() => setIsSidebarOpen(false)}
-                  className="hover-show-options text-white hover:text-white transition"
+                  className="hover-show-options whitespace-nowrap text-white hover:text-white transition"
                 >
                   এজেন্ট কে ভেরিফাই করুন
                 </h1>
