@@ -69,7 +69,12 @@ const MsterAgent = () => {
 
         {/* policy */}
         <div className="mt-4">
-          <p className="text-center">
+          <VelkiMaster></VelkiMaster>
+        </div>
+
+        {/* velkimaster */}
+        <div>
+          <p className="text-center mt-4">
             <span className="font-bold text-xl">
               {" "}
               এজেন্ট দের সাথে লেনদেন এর আগে ভেল্কির নিয়ম গুলো জেনে নিন!!{" "}
@@ -99,11 +104,6 @@ const MsterAgent = () => {
             নাম্বার <br />
             আসবে - তাকে অভিযোগ করতে হবে।
           </p>
-        </div>
-
-        {/* velkimaster */}
-        <div>
-          <VelkiMaster></VelkiMaster>
         </div>
       </div>
     </div>

@@ -31,17 +31,7 @@ const SideAdminList = () => {
         <button className="px-4 py-2 bg-white border text-black rounded hover:bg-red-500 hover:text-white transition">
           AGENT
         </button>
-        <p className="text-sm md:text-base mt-2 text-center">
-          <span className="text-lg font-bold">
-            এজেন্ট দের সাথে লেনদেন এর আগে ভেল্কির নিয়ম গুলো জেনে নিন!!
-          </span>{" "}
-          <br />
-          **প্রতারনার হাত থেকে বাচতে সবার আগে ভিজিট করুন ভেল্কি সাইটঃ VELKI.COM{" "}
-          <br />
-          **হোয়াটসঅ্যাপ ব্যাতিত অন্য কোন এপ এর মাধ্যমে যোগাযোগ বা লেনদেন করা{" "}
-          <br />
-          যাবে না এবং করলে তা গ্রহনযোগ্য হবে না।
-        </p>
+
         <h1 className="text-xl md:text-2xl font-bold text-center mt-4">
           VELKI SITE ADMINE LIST
         </h1>
@@ -77,7 +67,7 @@ const SideAdminList = () => {
                 <td className="px-2 py-2 border">
                   <Link to={`https://wa.me/${item.PHONE_NUMBER}`}>
                     <img
-                      className="w-8 mx-auto max-w-xs"
+                      className="w-8 mx-auto max-w-xs rounded-full"
                       src={item.WHTS}
                       alt=""
                     />
@@ -95,6 +85,19 @@ const SideAdminList = () => {
             ))}
           </tbody>
         </table>
+      </div>
+      <div className="mt-4">
+        <p className="text-sm md:text-base mt-2 text-center">
+          <span className="text-lg font-bold">
+            এজেন্ট দের সাথে লেনদেন এর আগে ভেল্কির নিয়ম গুলো জেনে নিন!!
+          </span>{" "}
+          <br />
+          **প্রতারনার হাত থেকে বাচতে সবার আগে ভিজিট করুন ভেল্কি সাইটঃ VELKI.COM{" "}
+          <br />
+          **হোয়াটসঅ্যাপ ব্যাতিত অন্য কোন এপ এর মাধ্যমে যোগাযোগ বা লেনদেন করা{" "}
+          <br />
+          যাবে না এবং করলে তা গ্রহনযোগ্য হবে না।
+        </p>
       </div>
     </div>
   );

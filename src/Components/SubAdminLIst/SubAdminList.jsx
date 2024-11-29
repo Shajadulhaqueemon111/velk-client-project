@@ -67,6 +67,11 @@ const SubAdminList = () => {
 
         {/* policy */}
         <div className="mt-4">
+          <SubAdmins></SubAdmins>
+        </div>
+
+        {/* velkimaster */}
+        <div className="mt-4">
           <p className="text-center">
             <span className="font-bold text-xl">
               {" "}
@@ -97,11 +102,6 @@ const SubAdminList = () => {
             নাম্বার <br />
             আসবে - তাকে অভিযোগ করতে হবে।
           </p>
-        </div>
-
-        {/* velkimaster */}
-        <div>
-          <SubAdmins></SubAdmins>
         </div>
       </div>
     </div>

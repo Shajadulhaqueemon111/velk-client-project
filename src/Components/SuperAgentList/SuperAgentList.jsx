@@ -68,6 +68,11 @@ const SuperAgentList = () => {
 
         {/* policy */}
         <div className="mt-4">
+          <SuperAgent></SuperAgent>
+        </div>
+
+        {/* velkimaster */}
+        <div className="mt-4">
           <p className="text-center">
             <span className="font-bold text-xl">
               {" "}
@@ -98,11 +103,6 @@ const SuperAgentList = () => {
             নাম্বার <br />
             আসবে - তাকে অভিযোগ করতে হবে।
           </p>
-        </div>
-
-        {/* velkimaster */}
-        <div>
-          <SuperAgent></SuperAgent>
         </div>
       </div>
     </div>

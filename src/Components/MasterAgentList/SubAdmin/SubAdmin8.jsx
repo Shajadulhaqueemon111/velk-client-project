@@ -57,7 +57,11 @@ const SubAdmin8 = () => {
                   <td className="px-2 py-2 border">{item.AGENT}</td>
                   <td className="px-2 py-2 border">
                     <Link to="https://wa.me/+85585292543">
-                      <img className="w-8 mx-auto" src={item.APP} alt="" />
+                      <img
+                        className="w-8 mx-auto rounded-full"
+                        src={item.APP}
+                        alt=""
+                      />
                     </Link>
                   </td>
                   <td className="px-2 py-2 border">
@@ -65,7 +69,7 @@ const SubAdmin8 = () => {
                       className="text-red-500"
                       to={`https://wa.me/${item.phone_number}`}
                     >
-                      {item.PHONE_NUMBER}
+                      {item.phone_number}
                     </Link>
                   </td>
                   <td className="px-2 py-2 border">

@@ -69,7 +69,11 @@ const VelkiMaster = () => {
                 <td className="px-2 py-2 border">{item.agent}</td>
                 <td className="px-2 py-2 border">
                   <Link to="https://wa.me/+85585292543">
-                    <img className="w-8 mx-auto" src={item.app} alt="" />
+                    <img
+                      className="w-8 mx-auto rounded-full"
+                      src={item.app}
+                      alt=""
+                    />
                   </Link>
                 </td>
                 <td className="px-2 py-2 border">
