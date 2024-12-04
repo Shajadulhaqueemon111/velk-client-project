@@ -14,7 +14,7 @@ const RandomMaster = () => {
       title: "মাষ্টার এজেন্ট এর তথ্য ১",
       date: "02 January 2024",
       agentId: "777",
-      whatsapp: "+60172561374",
+      whatsapp: "+601125311955",
       image: "https://i.ibb.co.com/GcC1Gw9/800x300randommasteragent.jpg",
     },
     {
@@ -22,7 +22,7 @@ const RandomMaster = () => {
       title: "মাষ্টার এজেন্ট এর তথ্য ২",
       date: "02 January 2024",
       agentId: "879",
-      whatsapp: "+855966542486",
+      whatsapp: "+601125311955",
       image: "https://i.ibb.co.com/GcC1Gw9/800x300randommasteragent.jpg",
     },
     {
@@ -30,7 +30,7 @@ const RandomMaster = () => {
       title: "মাষ্টার এজেন্ট এর তথ্য ৩",
       date: "02 January 2024",
       agentId: "2876",
-      whatsapp: "+85593462759",
+      whatsapp: "+601125311955",
       image: "https://i.ibb.co.com/GcC1Gw9/800x300randommasteragent.jpg",
     },
     {
@@ -38,7 +38,7 @@ const RandomMaster = () => {
       title: "মাষ্টার এজেন্ট এর তথ্য ৪",
       date: "02 January 2024",
       agentId: " 1479",
-      whatsapp: "+855963925813",
+      whatsapp: "+601125311955",
       image: "https://i.ibb.co.com/GcC1Gw9/800x300randommasteragent.jpg",
     },
     // Duplicate the above object for more cards
